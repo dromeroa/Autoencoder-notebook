@@ -23,3 +23,6 @@ La curva roja (corte al 1%) presenta un perfil más "dentado" que la curva origi
 El ajuste en la magnitud de la penalidad **DisCo** ha sido exitoso. La arquitectura (VAE/GNN) ha logrado extraer características de la subestructura del jet en un espacio latente que es efectivamente independiente de la masa. 
 
 Este nivel de decorrelación asegura que cualquier señal observada tras la aplicación del clasificador en datos reales será atribuible a la **física subyacente** y no a un artefacto del modelo de aprendizaje profundo. El pipeline de inferencia es robusto y está listo para la fase de análisis de sensibilidad.
+
+
+<img width="2972" height="2068" alt="image" src="https://github.com/user-attachments/assets/59e9827e-670e-4514-827e-c5e091327c06" />
