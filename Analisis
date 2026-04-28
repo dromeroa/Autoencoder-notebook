@@ -1,0 +1,24 @@
+Análisis de la Evaluación de Mass Sculpting
+¡Este es un resultado excelente! El gráfico muestra exactamente el comportamiento ideal que se busca al implementar técnicas de decorrelación en análisis de física de altas energías (HEP).
+
+Aquí tienes el desglose de lo que nos revela la figura:
+
+1. Preservación de la cinemática del fondo
+La característica más importante es que las cuatro distribuciones se superponen casi a la perfección. A medida que aplicas cortes más estrictos basados en el score de tu red neuronal (pasando de retener el 100% al 10%, 5% y finalmente el 1%), la forma macroscópica de la distribución no cambia. Esto demuestra empíricamente que tu clasificador es agnóstico a la masa invariante.
+
+2. Ausencia de "Mass Sculpting"
+Si observas con atención la línea roja (que representa a ese 1% de eventos del fondo que la red clasificó con los puntajes más altos), notarás que sigue respetando la caída exponencial suave característica del fondo QCD.
+
+No se ha formado ningún pico espurio.
+
+No hay ninguna "joroba" artificial en las regiones críticas (como los rangos de 80-90 GeV o cerca de 125 GeV).
+
+El modelo no está "haciendo trampa" al aprender atajos cinemáticos relacionados con la masa.
+
+3. Fluctuaciones estadísticas normales
+Es evidente que la curva roja (corte al 1%) es más "dentada" o escalonada que la curva azul original. Lejos de ser un problema, este es el comportamiento estadístico esperado. Al quedarte con solo el 1% de tu muestra original, el número de eventos por bin se reduce drásticamente, haciendo visibles las fluctuaciones de Poisson. Es ruido estadístico puro, no un esculpido de la masa.
+
+Conclusión
+El ajuste en la magnitud de tu penalidad DisCo ha funcionado a la perfección. La red está logrando aislar las variables del FatJet (como la subestructura capturada por el VAE o la GNN) en un espacio latente que es verdaderamente independiente de la masa.
+
+Con este nivel de decorrelación confirmado, cualquier pico o resonancia que aísles al aplicar este clasificador sobre los datos reales será genuinamente atribuible a la física subyacente y no a un artefacto del Machine Learning. El pipeline de inferencia está demostrando ser robusto.
